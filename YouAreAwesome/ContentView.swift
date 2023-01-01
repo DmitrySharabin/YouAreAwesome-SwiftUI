@@ -9,78 +9,83 @@ import SwiftUI
 
 struct ContentView: View {
 //    @State private var messageString = "When the Genius Bar needs help, they call you!"
-    @State private var messageString = ""
+    @State private var messageString = "Namaste"
     
     var body: some View {
-        ZStack {
-//            Rectangle()
-//                .fill(.yellow.gradient)
-//                .ignoresSafeArea()
+        VStack {
+            Spacer()
             
-            GeometryReader { geometry in
-                VStack {
-    //                Text("You Have Skills!")
-    //                    .font(.largeTitle)
-    //                    .fontWeight(.black)
-    //                    .foregroundColor(Color("Gold-BC"))
-    //                    .padding()
-    //                    .background(Color("Marron-BC"))
-    //    //                .cornerRadius(0) // Fix for the background bleeding to the safe area.
-    //                    .cornerRadius(15)
-                    
-//                    Group {
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                        Text("I am a Text View!")
-//                    }
-//                    .font(.title)
-//                    .fontWeight(.heavy)
-                    
-                    Spacer()
-                    
-                    Text(messageString)
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .minimumScaleFactor(0.5)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.red)
-                        .frame(height: 150)
-                        .frame(maxWidth: .infinity)
-        //                .border(.orange, width: 1)
-                        .padding()
-                    
-                    Spacer()
-                    
-//                    Divider()
-//                        .background(.black)
-//                        .padding()
-//                        .frame(width: 150.0)
-//
-//                    Rectangle()
-//                        .fill(.indigo)
-////                        .frame(width: 175, height: 1)
-//                        .frame(width: geometry.size.width * (2 / 3), height: 1)
-                    
-                    HStack {
-                        Button("Awesome") {
-                            messageString = "You Are Awesome!"
-                        }
-                        .buttonStyle(.borderedProminent)
-                        
-                        Spacer()
-                        
-                        Button("Great") {
-                            messageString = "You Are Great!"
-                        }
-                        .buttonStyle(.borderedProminent)
-                    }
-                    .padding()
+//            Image(systemName: "figure.mind.and.body")
+//                .resizable()
+//                .scaledToFit()
+////                .scaledToFill()
+//                .foregroundColor(.pink)
+////                .border(.red)
+////                .frame(width: 200, height: 300)
+////                .clipped()
+////                .border(.blue)
+            
+//            Image(systemName: "cloud.sun.rain.fill")
+//                .resizable()
+//                .scaledToFit()
+////                .symbolRenderingMode(.hierarchical)
+////                .foregroundColor(.orange)
+////                .symbolRenderingMode(.palette)
+////                .foregroundStyle(.gray, .orange, .blue)
+//                .symbolRenderingMode(.multicolor)
+//                .padding()
+//                .background(Color(hue: 0.558, saturation: 0.227, brightness: 1.0))
+//                .cornerRadius(30)
+////                .clipShape(Circle())
+//                .shadow(color: .gray, radius: 30, x: 20, y: 20)
+////                .border(.red, width: 5)
+////                .cornerRadius(30)
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 30)
+//                        .stroke(.teal, lineWidth: 1)
+//                )
+//                .padding()
+            
+            Image(systemName: "speaker.wave.3", variableValue: 0.6)
+                .resizable()
+                .scaledToFit()
+                .symbolRenderingMode(.multicolor)
+                .padding()
+                .background(Color(hue: 0.558, saturation: 0.227, brightness: 1.0))
+                .cornerRadius(30)
+                .shadow(color: .gray, radius: 30, x: 20, y: 20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(.teal, lineWidth: 1)
+                )
+                .padding()
+            
+            Text(messageString)
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .minimumScaleFactor(0.5)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.red)
+                .frame(height: 150)
+                .frame(maxWidth: .infinity)
+                .padding()
+            
+            Spacer()
+            
+            HStack {
+                Button("Awesome") {
+                    messageString = "You Are Awesome!"
                 }
+                .buttonStyle(.borderedProminent)
+                
+                Spacer()
+                
+                Button("Great") {
+                    messageString = "You Are Great!"
+                }
+                .buttonStyle(.borderedProminent)
             }
+            .padding()
         }
     }
 }
